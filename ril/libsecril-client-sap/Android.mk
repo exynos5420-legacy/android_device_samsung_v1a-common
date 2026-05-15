@@ -16,6 +16,10 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_CFLAGS := 
 
+
+LOCAL_C_INCLUDES += $(DEVICE_PATH)/include
+
+
 LOCAL_MODULE:= libsecril-client-sap
 LOCAL_PRELINK_MODULE := false
 LOCAL_VENDOR_MODULE := true
