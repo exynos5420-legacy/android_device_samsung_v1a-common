@@ -23,7 +23,8 @@ DEVICE_PATH := device/samsung/v1a-common
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+$(call soong_config_set,brcm_libbt,custom_bt_config,//device/samsung/v1a-common:vnd_v1acommon.txt)
+$(call soong_config_set,brcm_libbt,bdroid_buildcfg_include_dir,device/samsung/v1a-common/bluetooth)
 
 # Display
 TARGET_SCREEN_DENSITY := 320
